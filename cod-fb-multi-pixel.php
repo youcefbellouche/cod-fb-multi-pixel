@@ -10,9 +10,14 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	die;
 }
-
+require_once './vendor/autoload.php';
 // Define Constants
 define( 'COD_FB_MP_PLUGIN_VERSION', '1.0.0' );
 define( 'COD_FB_MP_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'COD_FB_MP_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'COD_FB_MP_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
+
+
+require_once COD_FB_MP_PLUGIN_DIR . 'inc/classes/cod-fb-mp-settings.php';
+require_once COD_FB_MP_PLUGIN_DIR . 'inc/classes/cod-fb-mp-script.php';
+require_once COD_FB_MP_PLUGIN_DIR . 'inc/classes/cod-fb-convirsion-events.php';

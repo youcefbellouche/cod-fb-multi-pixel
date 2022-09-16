@@ -1,0 +1,17 @@
+{
+    "name": "youcef/pixel",
+    "autoload": {
+        "psr-4": {
+            "Inc\\": "inc/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Youcef Bellouche",
+            "email": "fecuoy03@gmail.com"
+        }
+    ],
+    "require": {
+        "facebook/php-ads-sdk": "12.0.*"
+    }
+}
