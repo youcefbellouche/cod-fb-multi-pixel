@@ -2,7 +2,7 @@
 
 class Cod_Multi_Pixel {
 	function __construct() {
-		add_action( 'init', array( $this, 'cod_fb_mp_settings' ) );
+		add_action( 'admin_menu', array( $this, 'cod_fb_mp_settings' ) );
 		add_action( 'init', array( $this, 'cod_fb_mp_settings_save' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_cod_facebook_pixels_scripts' ) );
 
@@ -19,17 +19,23 @@ class Cod_Multi_Pixel {
 		if ( isset( $_POST['cod_facebook_pixels'] ) ) {
 			$pixels = $_POST['cod_facebook_pixels'];
 			foreach ( $pixels as $key => $pixel ) {
-				if ( $pixel['pixel'] != '' ) {
+				if ( trim( $pixel['pixel'] ) != '' ) {
 
-					$filtered_pixels[ $key ]['pixel'] = $pixel['pixel'];
-					$filtered_pixels[ $key ]['api']   = $pixel['api'];
+					$filtered_pixels[ $key ]['pixel'] = trim( $pixel['pixel'] );
+					$filtered_pixels[ $key ]['api']   = trim( $pixel['api'] );
+					$filtered_pixels[ $key ]['test']  = trim( $pixel['test'] );
 
 				}
 			}
-			update_option( 'cod_facebook_pixels', $filtered_pixels, true );
+			if ( ! empty( $filtered_pixels ) ) {
+				update_option( 'cod_facebook_pixels', $filtered_pixels, true );
+			} else {
+				update_option( 'cod_facebook_pixels', array(), true );
+			}
 		}
-
 	}
+
+
 	public function cod_facebook_pixels_display() {
 		require_once COD_FB_MP_PLUGIN_DIR . 'inc/partials/settings-page.php';
 	}

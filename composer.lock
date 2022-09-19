@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "58d87592dfe3c6253bc6eebc51203b82",
+    "content-hash": "0cce8a575ff583f26fb264bf4b641597",
     "packages": [
         {
             "name": "facebook/php-ads-sdk",
-            "version": "12.0.1",
+            "version": "14.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facebook/facebook-php-business-sdk.git",
-                "reference": "8a5116a7b9dda010e41438380c18eb2576719ef9"
+                "reference": "6bf9444b97be16feaf24e593d6403357577de257"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facebook/facebook-php-business-sdk/zipball/8a5116a7b9dda010e41438380c18eb2576719ef9",
-                "reference": "8a5116a7b9dda010e41438380c18eb2576719ef9",
+                "url": "https://api.github.com/repos/facebook/facebook-php-business-sdk/zipball/6bf9444b97be16feaf24e593d6403357577de257",
+                "reference": "6bf9444b97be16feaf24e593d6403357577de257",
                 "shasum": ""
             },
             "require": {
@@ -46,9 +46,9 @@
                 "sdk"
             ],
             "support": {
-                "source": "https://github.com/facebook/facebook-php-business-sdk/tree/12.0.1"
+                "source": "https://github.com/facebook/facebook-php-business-sdk/tree/14.0.0"
             },
-            "time": "2021-10-25T22:58:14+00:00"
+            "time": "2022-07-12T19:58:36+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",

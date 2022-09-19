@@ -1,8 +1,8 @@
 {
-    "name": "youcef/pixel",
+    "name": "youcef/cod-fb-multi-pixel",
     "autoload": {
         "psr-4": {
-            "Inc\\": "inc/"
+            "inc\\": "inc/"
         }
     },
     "authors": [
@@ -12,6 +12,7 @@
         }
     ],
     "require": {
-        "facebook/php-ads-sdk": "12.0.*"
-    }
+        "facebook/php-ads-sdk": "^14.0"
+    },
+    "platform-check": false
 }
