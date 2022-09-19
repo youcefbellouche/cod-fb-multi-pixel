@@ -16,8 +16,10 @@ class Cod_Fp_Script_Convirsion_Events {
 				$this->conversions_api[] = new Cod_Fp_Script_Convirsion_Api( $pixel['api'], $pixel['pixel'], $pixel['test'] );
 			}
 		}
-		add_action( 'cod_thank_you_page', array( $this, 'cod_purchase_event' ) );
-		add_action( 'cod_after_footer', array( $this, 'cod_view_product_event' ), 10, 2 );
+		if ( ! empty( $this->conversions_api ) ) {
+			add_action( 'cod_thank_you_page', array( $this, 'cod_purchase_event' ) );
+			add_action( 'cod_after_footer', array( $this, 'cod_view_product_event' ), 10, 2 );
+		}
 
 	}
 	public function cod_purchase_event( $order_meta ) {
@@ -26,7 +28,6 @@ class Cod_Fp_Script_Convirsion_Events {
 		}
 	}
 	public function cod_view_product_event( $product_price, $product_name ) {
-		file_put_contents( COD_FB_MP_PLUGIN_DIR . 'purchese2.log', json_encode( array( 'working ' ) ) );
 		foreach ( $this->conversions_api as  $api ) {
 			$api->emit_event( array(), array(), $product_name, 0, 'dzd', $product_price, 'View Product', home_url( $wp->request ) );
 		}
