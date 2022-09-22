@@ -8,7 +8,7 @@ class Cod_Multi_Pixel {
 
 	}
 	public function cod_fb_mp_settings() {
-		add_menu_page( __( 'Facebook Multi pixel' ), 'Multi Pixel', 'manage_options', 'cod-facebook-pixels', array( $this, 'cod_facebook_pixels_display' ), '', 7 );
+		add_menu_page( __( 'Facebook Multi pixel' ), 'Multi Pixel', 'manage_options', 'cod-facebook-pixels', array( $this, 'cod_facebook_pixels_display' ), 'dashicons-facebook', 7 );
 	}
 	public function cod_fb_mp_settings_save() {
 		if ( ! isset( $_POST['cod_facebook_pixels_nonce'] )

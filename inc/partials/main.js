@@ -7,8 +7,8 @@ function model(
   const model = `
     <div class="cod_facebook_pixel">
     <input type="text" required name="cod_facebook_pixels[${index}][pixel]" value="${pixel}" placeholder="Pixel Id" id="">
-    <input type="text" name="cod_facebook_pixels[${index}][api]" value="${api}" placeholder="Confersion Api" id="">
-    <input type="text" name="cod_facebook_pixels[${index}][test]" value="${test}" placeholder="Confersion Api Test Event" id="">
+    <input type="text" name="cod_facebook_pixels[${index}][api]" value="${api}" placeholder="Conversion Api" id="">
+    <input type="text" name="cod_facebook_pixels[${index}][test]" value="${test}" placeholder="Conversion Api Test Event" id="">
     <button class="button-red remove_pixel_field" style="margin-left: 5px;">Delete</button>
     </div>
     `;

@@ -9,7 +9,7 @@ use \FacebookAds\Object\ServerSide\Event;
 use \FacebookAds\Object\ServerSide\EventRequest;
 use \FacebookAds\Object\ServerSide\UserData;
 
-class Cod_Fp_Script_Convirsion_Api {
+class Cod_Fp_Script_Conversion_Api {
 	private $access_token;
 	private $pixel_id;
 	private $user_data;
