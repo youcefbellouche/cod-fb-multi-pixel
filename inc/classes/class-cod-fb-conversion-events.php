@@ -2,13 +2,13 @@
 
 require_once COD_FB_MP_PLUGIN_DIR . 'inc/classes/class-cod-fb-conversion-api.php';
 
-class Cod_Fp_Script_Conversion_Events {
+class Cod_Fb_Conversion_Events {
 	private $conversions_api;
 	public function __construct() {
 		$pixels = get_option( 'cod_facebook_pixels', array() );
 		foreach ( $pixels as  $key => $pixel ) {
 			if ( $pixel['api'] != '' ) {
-				$this->conversions_api[] = new Cod_Fp_Script_Conversion_Api( $pixel['api'], $pixel['pixel'], $pixel['test'] );
+				$this->conversions_api[] = new Cod_Fb_Conversion_Api( $pixel['api'], $pixel['pixel'], $pixel['test'] );
 			}
 		}
 		add_action( 'init', array( $this, 'cod_event_init' ) );
@@ -32,4 +32,4 @@ class Cod_Fp_Script_Conversion_Events {
 
 }
 
-new Cod_Fp_Script_Conversion_Events();
+new Cod_Fb_Conversion_Events();

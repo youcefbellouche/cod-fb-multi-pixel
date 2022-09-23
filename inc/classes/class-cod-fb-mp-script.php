@@ -1,6 +1,6 @@
 <?php
 
-class Cod_Fp_Script_Header {
+class Cod_Fb_Script_Header {
 	function __construct() {
 		add_action( 'wp_head', array( $this, 'add_script_to_header' ) );
 	}
@@ -50,5 +50,5 @@ class Cod_Fp_Script_Header {
 	}
 
 }
-new Cod_Fp_Script_Header();
+new Cod_Fb_Script_Header();
 
