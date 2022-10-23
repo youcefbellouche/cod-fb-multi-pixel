@@ -1,7 +1,5 @@
 <?php
 
-require_once COD_FB_MP_PLUGIN_DIR . 'inc/classes/class-cod-fb-conversion-api.php';
-
 class Cod_Fb_Conversion_Events {
 	private $conversions_api;
 	public function __construct() {
@@ -15,8 +13,8 @@ class Cod_Fb_Conversion_Events {
 
 	}
 	public function cod_event_init() {
-		add_action( 'cod_product_purchese_event', array( $this, 'cod_purchase_event' ), 10, 2 );
-		add_action( 'cod_after_footer_events', array( $this, 'cod_view_product_event' ), 10, 3 );
+		add_action( 'cod_product_purchese_event', array( $this, 'cod_purchase_event' ),10,2 );
+		add_action( 'cod_after_footer_events', array( $this, 'cod_view_product_event' ) , 10 ,3 );
 
 	}
 	public function cod_purchase_event( $order_meta, $devise ) {

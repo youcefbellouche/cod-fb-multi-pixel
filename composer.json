@@ -1,18 +1,18 @@
 {
-    "name": "youcef/cod-fb-multi-pixel",
-    "autoload": {
-        "psr-4": {
-            "inc\\": "inc/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Youcef Bellouche",
-            "email": "fecuoy03@gmail.com"
-        }
-    ],
-    "require": {
-        "facebook/php-ads-sdk": "^14.0"
-    },
-    "platform-check": false
+  "name": "youcef/cod-fb-multi-pixel",
+  "autoload": {
+    "psr-4": {
+      "inc\\": "inc/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Youcef Bellouche",
+      "email": "fecuoy03@gmail.com"
+    }
+  ],
+  "require": {
+    "facebook/php-ads-sdk": "^14.0",
+    "guzzlehttp/guzzle": "^7.0"
+  }
 }
